@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: white;
+  color: #080808;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(8, 8, 8, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #252525;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-sec {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.company-sec .logo {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.company-sec h1 {
+  color: white;
+  font-size: 24px;
+}
+
+/* NAVIGATION */
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #999;
+}
+
+/* CART */
+
+.cart-page {
+  padding: 100px 8%;
+  min-height: 70vh;
+}
+
+.cart-page h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.cart-items {
+  max-width: 700px;
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cart-items h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cart-items p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.cart-items a {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #080808;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.cart-items a:hover {
+  background: #333;
+}
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+  }
+
+  .cart-page {
+    padding: 80px 6%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px;
+  }
+
+  .company-sec h1 {
+    font-size: 20px;
+  }
+
+  .company-sec .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .cart-page {
+    padding: 60px 6%;
+  }
+
+  .cart-page h2 {
+    font-size: 38px;
+  }
+
+  .cart-items {
+    padding: 30px 20px;
+  }
+}
